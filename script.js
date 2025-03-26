@@ -17,3 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     fetchJoke();
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
+            fetchJoke(category);
+        });
+    });
+});
